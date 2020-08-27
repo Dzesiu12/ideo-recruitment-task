@@ -1,0 +1,40 @@
+@import "node_modules/reset-css/sass/reset";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  height: 60px;
+  background-color: #1abc9c;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #2ecc71;
+  display: flex;
+}
+
+.footer {
+  height: 60px;
+  background-color: #3498db;
+}
+
+.side-menu {
+  padding: 0 40px;
+  background-color: #9b59b6;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #34495e;
+}
