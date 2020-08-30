@@ -68,6 +68,9 @@
 
 .side-menu {
   padding: 90px 40px 0;
+  position: fixed;
+  left: 0;
+  top: 88px;
 }
 
 .main-content {
@@ -77,6 +80,9 @@
 }
 
 .main-content {
+  display: flex;
+  justify-content: center;
+
   &__header {
     padding-bottom: 48px;
     margin-bottom: 48px;
@@ -84,6 +90,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     &__icon {
       width: 82px;
@@ -97,4 +104,25 @@
     }
   }
 
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    font-size: 1rem;
+    
+    &__column {
+      &__title {
+        margin-bottom: 20px;
+      }
+
+      &__image {
+        margin-bottom: 1rem;
+        max-width: 100%;
+      }
+
+      p {
+        margin-bottom:1rem;
+      }
+    }
+  }
 }
