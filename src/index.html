@@ -24,6 +24,15 @@
                     <a class="navbar__items__item" href="#">Kontakt</a>
                 </div>
             </div>
+            <div class="navbar__search">
+                <div class="navbar__search__input" id="search">
+                  <input type="text" name="search">
+                </div>
+                <div class="navbar__search__icon" id='search_icon'> 
+                  <img src="assets/img/search.png"
+                  alt="lupka wyszukiwania">
+                </div>   
+            </div>
         </nav>
 
         <main class="content">
@@ -43,7 +52,13 @@
 
                 <ul class="side-menu__list">
                     <li class="side-menu__list__item"><a href="#">O firmie</a></li>
-                    <li class="side-menu__list__item"><a href="#">Nagrody</a></li>
+                    <li class="side-menu__list__item" id="prizes"><a href="#">Nagrody</a> <img src="assets/img/list-trigger.png" alt="wyzwalacz rozwijanego menu" id="hidden_img"></li>
+                    <ul class="side-menu__list__item__hidden" id="prizes_menu">
+                        <li class="side-menu__list__item__hidden__item">item</li>
+                        <li class="side-menu__list__item__hidden__item">item</li>
+                        <li class="side-menu__list__item__hidden__item">item</li>
+                        <li class="side-menu__list__item__hidden__item">item</li>
+                    </ul>
                     <li class="side-menu__list__item"><a href="#">Relacje inwestorskie</a></li>
                     <li class="side-menu__list__item"><a href="#">Partnerzy</a></li>
                     <li class="side-menu__list__item"><a href="#">Kariera</a></li>
@@ -126,5 +141,7 @@
         <footer class="footer">
         </footer>
     </div>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/prizes.js"></script>
 </body>
 </html>
