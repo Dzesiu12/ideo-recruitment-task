@@ -30,28 +30,31 @@
   }
 
   &__search {
-     position: absolute;
-     display: flex;
-      right: 3rem;
-      top: 2rem;
+    position: absolute;
+    display: flex;
+    right: 3rem;
+    top: 2rem;
 
     &__input {
-      display: none;
-      justify-content: flex-start;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform 0.4s;
+      
+      &.active {
+        transform: scaleX(1);
+      }
     }    
 
     &__icon {
-      justify-content: flex-end;
-      transition: 0.4s;
+      transition: transform 0.4s;
       cursor: pointer;
       margin-left: 7px;
  
-      &:hover{
-         transform: scale(1.3);
+      &:hover {
+        transform: scale(1.3);
       }
-     }
+    }
   }
-
 
   &__brand {
     display: flex;
@@ -118,23 +121,22 @@
       }
 
       img {
-        cursor:pointer;
-        
+        cursor: pointer;
         transition: transform 0.3s;
+
+        &:hover { 
+          transform: rotate(-90deg); 
+        }
       }
 
-      img:hover { 
-        transform: rotate(-90deg); 
-         }
-
-       &__hidden {
-         display: none;
+      &__hidden {
+        display: none;
         margin-left: 15px;
+
         &__item { 
           padding-bottom: 10px;
         }
-
-        }  
+      }  
       
       &:not(:last-child) {
         padding-bottom: 1rem;
@@ -143,17 +145,12 @@
   }
 }
 
-
-
-.main-content {
-  flex-grow: 1;
-  padding-top: 96px;
-  display: flex;
-}
-
 .main-content {
   padding-bottom: 90px;
   margin-left: 48px;
+  flex-grow: 1;
+  padding-top: 96px;
+  display: flex;
 
   &__header {
     padding-bottom: 48px;
