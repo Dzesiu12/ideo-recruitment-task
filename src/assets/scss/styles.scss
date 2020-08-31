@@ -4,6 +4,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -209,8 +212,13 @@
         max-width: 100%;
       }
 
+      h3 {
+        margin-bottom: 0.25rem;
+      }
+      
       p {
-        margin-bottom:1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
       }
     }
   }
