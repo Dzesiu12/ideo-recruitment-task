@@ -26,7 +26,11 @@
   background-color: #003b5a;
 
   .container {
-    padding-left: 256px;
+    padding-left: 168px;
+
+    @media (min-width: 1560px) {
+      padding-left: 256px;
+    }
   }
 
   &__search {
@@ -39,17 +43,17 @@
       transform: scaleX(0);
       transform-origin: right center;
       transition: transform 0.4s;
-      
+
       &.active {
         transform: scaleX(1);
       }
-    }    
+    }
 
     &__icon {
       transition: transform 0.4s;
       cursor: pointer;
       margin-left: 7px;
- 
+
       &:hover {
         transform: scale(1.3);
       }
@@ -60,13 +64,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 256px;
-    height: 184px;
+    width: 168px;
     position: absolute;
     left: 0;
     top: 0;
     background-color: #FFF;
     box-shadow: 4px 4px 6px 0 rgba(#000, .15);
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (min-width: 1560px) {
+      width: 256px;
+    }
   }
 
   &__items {
@@ -75,6 +86,11 @@
     justify-content: space-between;
     height: 100%;
     margin-left: 48px;
+    margin-right: 100px;
+
+    @media (min-width: 1560px) {
+      margin-right: 0px;
+    }
 
     &__item {
       color: #FFF;
@@ -109,12 +125,12 @@
       border-bottom: 1px dotted #023a5c;
     }
 
-    &__item { 
+    &__item {
       a {
         text-decoration: none;
         color: #023a5c;
-        transition: color 0.3s; 
-        
+        transition: color 0.3s;
+
         &:hover {
           color: coral;
         }
@@ -124,8 +140,8 @@
         cursor: pointer;
         transition: transform 0.3s;
 
-        &:hover { 
-          transform: rotate(-90deg); 
+        &:hover {
+          transform: rotate(-90deg);
         }
       }
 
@@ -133,24 +149,28 @@
         display: none;
         margin-left: 15px;
 
-        &__item { 
+        &__item {
           padding-bottom: 10px;
         }
-      }  
-      
+      }
+
       &:not(:last-child) {
         padding-bottom: 1rem;
       }
-    } 
+    }
   }
 }
 
 .main-content {
   padding-bottom: 90px;
-  margin-left: 48px;
   flex-grow: 1;
   padding-top: 96px;
   display: flex;
+  justify-content: center;
+
+  .container {
+    margin-left: -212px;
+  }
 
   &__header {
     padding-bottom: 48px;
